@@ -21,20 +21,20 @@ namespace NewspaperAsp.Net
 
        protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (inputEmail.Value.ToUpper() == "ADMIN" && inputPassword.Value.ToUpper() =="ADMIN")
+            if (inputUsername.Value.ToUpper() == "ADMIN" && inputPassword.Value.ToUpper() =="ADMIN")
             {
                 Response.Redirect("Home.aspx");
             }
-            /*
+           
             else
             {
-                LoginDetails log = ValidateUser(username.Value, psw.Value);
+                LoginDetails log = ValidateUser(inputUsername.Value, inputPassword.Value);
 
                 if(log.IsAuthUser)
                 {
                     Session["UserID"] = log.UserId;
-                    Session["role"] = log.role;
-                    Session["username"] = log.username;
+                    Session["role"] = log.Role;
+                    Session["username"] = log.UserName;
                     Session["IsAuth"] = log.IsAuthUser;
                     Response.Redirect("Home.aspx");
 
@@ -47,18 +47,42 @@ namespace NewspaperAsp.Net
             }
         }
 
-        private LoginDetails ValidateUser(string username, string psw)
+        private LoginDetails ValidateUser(string username, string password)
         {
-            LoginDetails obj = new LoginDeatils();
+            LoginDetails obj = new LoginDetails();
             obj.IsAuthUser = false;
+            try
+            {
+                SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["bs"].ConnectionString);
+                SqlDataAdapter da;
+                DataSet ds = new DataSet();
+                string query = "select * from users_table where username='" + username.Trim() + "' and pwd='" + password.Trim() + "'";
+                da = new SqlDataAdapter(query, con);
+                con.Open();
+                da.Fill(ds);
+                if (ds.Tables[0].Rows.Count > 0)
+                {
+                    obj.IsAuthUser = true;
+                    obj.UserName = ds.Tables[0].Rows[0]["UserName"].ToString();
+                    obj.UserId = int.Parse(ds.Tables[0].Rows[0]["UserId"].ToString());
+                    obj.Role = ds.Tables[0].Rows[0]["Role"].ToString();
+                }
+            }
+            catch (Exception ex)
+            {
+                obj.IsAuthUser = false;
+            }
+            return obj;
 
-            SqlConnection sqlcon = new SqlConnection(ConfigurationManager.ConnectionStrings["bs"].ConnectionString);
-            SqlDataAdapter da;
-            DataSet ds = new DataSet();
-            string qr = sele 
-            */
+        }
 
-        }  
+        private struct LoginDetails
+        {
+            public int UserId { get; set; }
+            public string UserName { get; set; }
+            public string Role { get; set; }
+            public bool IsAuthUser { get; set; }
+        }
 
     }
 }

@@ -67,8 +67,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\contactform\contactform.js" />
-    <Content Include="Content\contactform\Readme.txt" />
     <Content Include="Content\css\animate.css" />
     <Content Include="Content\css\animate.min.css" />
     <Content Include="Content\css\bootstrap-theme.css" />
@@ -77,9 +75,9 @@
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\css\font-awesome.css" />
     <Content Include="Content\css\font-awesome.min.css" />
+    <Content Include="Content\css\login.css" />
     <Content Include="Content\css\overwrite.css" />
     <Content Include="Content\css\responsive-slider.css" />
-    <Content Include="Content\css\SignIn.css" />
     <Content Include="Content\css\style.css" />
     <Content Include="Content\fonts\fontawesome-webfont.svg" />
     <Content Include="Content\fonts\glyphicons-halflings-regular.svg" />
@@ -94,7 +92,7 @@
     <Content Include="Content\img\b.jpg" />
     <Content Include="Content\img\c.jpg" />
     <Content Include="Content\img\d.jpg" />
-    <Content Include="Content\img\login-background.png" />
+    <Content Include="Content\img\image.png" />
     <Content Include="Content\img\news5.jpg" />
     <Content Include="Content\img\portfolio\1.jpg" />
     <Content Include="Content\img\portfolio\2.jpg" />
@@ -113,11 +111,6 @@
     <Content Include="Content\js\responsive-slider.js" />
     <Content Include="Content\js\responsive-slider.min.js" />
     <Content Include="Content\js\wow.min.js" />
-    <Content Include="Content\x-demo-images\1.gif" />
-    <Content Include="Content\x-demo-images\2.gif" />
-    <Content Include="Content\x-demo-images\3.gif" />
-    <Content Include="Content\x-demo-images\4.gif" />
-    <Content Include="Content\x-demo-images\a.jpg" />
     <Content Include="Home.aspx" />
     <Content Include="Login.aspx" />
     <Content Include="Web.config" />

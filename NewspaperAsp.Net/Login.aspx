@@ -9,10 +9,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="Content/css/bootstrap.css" rel="stylesheet" />
-    <link href="Content/css/SignIn.css" rel="stylesheet" />
+    <link href="Content/css/login.css" rel="stylesheet" />
     <style>
        body {
-    background-image: url('~/Content/img/login-background.png');
+    background-image: url('Content/img/image.png');
 }
     </style>
 </head>
@@ -22,7 +22,7 @@
             <h3 class="alert alert-success">Newspaper Agency</h3>
 
             <label for="inputEmail" class="sr-only">User Name</label>
-            <input type="text" id="inputEmail" class="form-control" placeholder="User Name" runat="server"
+            <input type="text" id="inputUsername" class="form-control" placeholder="User Name" runat="server"
                 required autofocus />
 
             <label for="inputPassword" class="sr-only">Password</label>
