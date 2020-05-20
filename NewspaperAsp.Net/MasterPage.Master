@@ -41,13 +41,7 @@
       <li class="nav-item">
         <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
       </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="index3.html" class="nav-link">Home</a>
-      </li>
-      <li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
-    </ul>
+     </ul>
 
     <!-- SEARCH FORM -->
     <form class="form-inline ml-3">
@@ -151,13 +145,28 @@
             
               <!-- /.card-header -->
               <div class="card-body">
+                  <div class="card-tools">
+                 
+                  <ul class="pagination pagination-sm float-right">
+                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
+                  </ul>
+                </div>
+               
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
+                    <th>Id</th>
                     <th>Customer Name</th>
                     <th>Contact</th>
+                    <th>Address</th>
                     <th>Amount Due</th>
-                    <th>Pay Button</th>
+                    <th>Last Payment Date</th>
+                    <th>Last Paid Amount</th>
+                    <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
@@ -165,21 +174,57 @@
                
                   
                   <tr>
+                     <td>1</td>
                     <td>Kratika Gupta</td>
                     <td>7583821040</td>
+                    <td>Greater Noida</td>
+                    <td>100</td>
+                    <td>01-01-2020</td>
                     <td>500</td>
-                    <td>-</td>
+                    <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Pay</button></td>
                   </tr>
 
                     <tr>
-                    <td>Arpit Roy</td>
-                    <td>7583858240</td>
+                     <td>2</td>
+                    <td>Amit Gupta</td>
+                    <td>7583821050</td>
+                    <td>Mumbai</td>
                     <td>100</td>
-                    <td>-</td>
+                    <td>01-01-2020</td>
+                    <td>500</td>
+                    <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Pay</button></td>
                   </tr>
                   </tbody>
-                 
                 </table>
+
+                   
+                  <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog  modal-sm">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      
+                       <div class="modal-body">
+                          <div class="form-group">
+                              <label for="usr">Amount Due:</label>
+                              <input type="text" class="form-control" id="usr">
+
+                               <label for="start">Today Date:</label>
+                               <input type="date" class="form-control" id="start" >
+
+                                <label for="usr">Amount Pay:</label>
+                                <input type="text" class="form-control" id="usr">
+                            </div>
+                      </div>
+                      <div class="modal-footer">
+                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                   </div>
+
+               </div>
+              </div>
+
               </div>
               <!-- /.card-body -->
             </div>
@@ -229,15 +274,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="Content/dist/js/demo.js"></script>
 <!-- page script -->
-    <script>
-        $(function () {
-            $("#example2").DataTable({
-                "responsive": true,
-                "autoWidth": false,
-            });
-
-        });
-</script>
+   
     
        
     
