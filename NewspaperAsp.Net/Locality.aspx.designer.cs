@@ -11,7 +11,7 @@ namespace NewspaperAsp.Net
 {
 
 
-    public partial class Add
+    public partial class Locality
     {
     }
 }

@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Hawker.aspx.cs" Inherits="NewspaperAsp.Net.hawker" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Newspaper.aspx.cs" Inherits="NewspaperAsp.Net.Customer" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="Content/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -88,7 +88,8 @@
               </p>
             </a>
           
-              <a href="Customer.aspx" class="nav-link">
+            
+             <a href="Customer.aspx" class="nav-link">
               <i class="nav-icon fas fa-user-friends"></i>
               <p>
                 Customer
@@ -119,6 +120,7 @@
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
+
           </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -143,30 +145,26 @@
               <div class="card-body">
                 
                <div class="card-tools">
-                         <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Add Hawker</button></td>
-                  
-                </div>
+                <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Add Newspaper/Magazine</button></td>
+                        
+
+               </div>
                 <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
-                    <th>Id</th>
-                    <th>Hawker Name</th>
-                    <th>Contact</th>
-                    <th>Address</th>
-                    <th>Locality Assign</th>
-                    <th>Action</th>
-                    
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                     <th>Action</th>
                   </tr>
                   </thead>
                   <tbody>
                  
   
                   <tr>
-                    <td>1</td>
-                    <td>Ravindar </td>
-                    <td>982647582</td>
-                    <td>noida</td>   
-                    <td>bus stand</td>
+                    <td>Times Of India</td>
+                    <td>Newspaper </td>
+                    <td>200</td>
                     <td>-</td>
                 
                   </tr>
@@ -182,24 +180,22 @@
                 <!-- Modal content-->
        <div class="modal-content">
            <div class="modal-header">
-             <h4 class="modal-title">Add a new Hawker</h4>
+             <h4 class="modal-title">Add new Category</h4>
            </div>
                <div class="modal-body">
                   <div class="form-group">
-                    <label for="usr">Hawker Name:</label>
-                    <input type="text" class="form-control" id="usr" placeholder="Enter Hawker name">
+                    <label for="usr"> Name:</label>
+                    <input type="text" class="form-control" id="usr" placeholder="Enter newspaper/magazine name">
 
-                    <label for="start">Contact:</label>
-                    <input type="text" class="form-control" id="start"  placeholder="Enter Contact No" >
+                       <label for="usr"> Category:</label>
+                   <select class="browser-default custom-select">
+                        <option selected>choose category</option>
+                        <option value="1">Newspaper</option>
+                        <option value="2">Magazine</option>
+                  </select>
 
-                    <label for="usr">Email:</label>
-                    <input type="text" class="form-control" id="usr"  placeholder="Enter your mail id">
-
-                    <label for="usr">Address:</label>
-                    <input type="text" class="form-control" id="usr"  placeholder="Enter your address">
-
-                     <label for="usr">Locality Assigned:</label>
-                     <input type="text" class="form-control" id="usr"  placeholder="Enter your locality here">
+                     <label for="usr">Price:</label>
+                     <input type="text" class="form-control" id="usr"  placeholder="Enter price of category">
 
                   </div>
               </div>
@@ -208,8 +204,8 @@
                       </div>
          </div>
 
-  </div>
- </div>                     
+       </div>
+       </div>                     
 
 
 
@@ -280,16 +276,17 @@
 <!-- AdminLTE for demo purposes -->
 <script src="Content/dist/js/demo.js"></script>
 <!-- page script -->
-  <script>
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-    </script>
+  
+     <script>
+         $('#example2').DataTable({
+             "paging": true,
+             "lengthChange": false,
+             "searching": false,
+             "ordering": true,
+             "info": true,
+             "autoWidth": false,
+             "responsive": true,
+         });
+       </script>
 </body>
 </html>

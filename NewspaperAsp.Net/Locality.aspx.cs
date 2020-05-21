@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace NewspaperAsp.Net
 {
-    public partial class Add : System.Web.UI.Page
+    public partial class Locality : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

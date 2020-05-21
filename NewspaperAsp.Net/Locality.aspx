@@ -1,11 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Hawker.aspx.cs" Inherits="NewspaperAsp.Net.hawker" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Locality.aspx.cs" Inherits="NewspaperAsp.Net.Locality" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title></title>
-     <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="Content/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -26,7 +26,6 @@
   <link rel="stylesheet" href="Content/plugins/summernote/summernote-bs4.css">
   <!-- Google Font: Source Sans Pro -->
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
-
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
@@ -143,73 +142,51 @@
               <div class="card-body">
                 
                <div class="card-tools">
-                         <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Add Hawker</button></td>
-                  
+                         <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Add Locality</button></td>
+              
                 </div>
                 <table id="example2" class="table table-bordered table-hover">
-                  <thead>
-                  <tr>
-                    <th>Id</th>
-                    <th>Hawker Name</th>
-                    <th>Contact</th>
-                    <th>Address</th>
-                    <th>Locality Assign</th>
-                    <th>Action</th>
-                    
-                  </tr>
-                  </thead>
+                     <thead>
+                        <tr>
+                          <th>Id</th>
+                          <th>Place</th>
+                            <th>Action</th>
+                        </tr>
+                     </thead>
                   <tbody>
-                 
-  
-                  <tr>
-                    <td>1</td>
-                    <td>Ravindar </td>
-                    <td>982647582</td>
-                    <td>noida</td>   
-                    <td>bus stand</td>
-                    <td>-</td>
-                
-                  </tr>
+                      <tr>
+                        <td>1</td> 
+                        <td>bus stand</td> 
+                        <td>-</td> 
+                       
+                      </tr>
                   </tbody>
                  
                 </table>
 
 
-                   <!-- Modal -->
-       <div id="myModal" class="modal fade" role="dialog">
-       <div class="modal-dialog">
+                  <!-- Modal -->
+                <div id="myModal" class="modal fade" role="dialog">
+                <div class="modal-dialog  modal-sm">
 
-                <!-- Modal content-->
-       <div class="modal-content">
-           <div class="modal-header">
-             <h4 class="modal-title">Add a new Hawker</h4>
-           </div>
-               <div class="modal-body">
-                  <div class="form-group">
-                    <label for="usr">Hawker Name:</label>
-                    <input type="text" class="form-control" id="usr" placeholder="Enter Hawker name">
-
-                    <label for="start">Contact:</label>
-                    <input type="text" class="form-control" id="start"  placeholder="Enter Contact No" >
-
-                    <label for="usr">Email:</label>
-                    <input type="text" class="form-control" id="usr"  placeholder="Enter your mail id">
-
-                    <label for="usr">Address:</label>
-                    <input type="text" class="form-control" id="usr"  placeholder="Enter your address">
-
-                     <label for="usr">Locality Assigned:</label>
-                     <input type="text" class="form-control" id="usr"  placeholder="Enter your locality here">
-
-                  </div>
-              </div>
-                      <div class="modal-footer">
-                          <button type="submit" class="btn btn-primary">Add</button>
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      
+                       <div class="modal-body">
+                          <div class="form-group">
+                              <label for="usr">Add Locality:</label>
+                              <input type="text" class="form-control" id="usr">
+                            </div>
                       </div>
-         </div>
+                      <div class="modal-footer">
+                       <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                      </div>
+                   </div>
 
-  </div>
- </div>                     
+               </div>
+              </div>
+
+              </div>
 
 
 

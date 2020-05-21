@@ -69,7 +69,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Add.aspx" />
     <Content Include="Content\css\bootstrap.css" />
     <Content Include="Content\css\login.css" />
     <Content Include="Content\dist\css\adminlte.css" />
@@ -1767,18 +1766,13 @@
     <Content Include="Content\vendor\select2\select2.min.js" />
     <Content Include="Customer.aspx" />
     <Content Include="Hawker.aspx" />
+    <Content Include="Locality.aspx" />
     <Content Include="Login.aspx" />
+    <Content Include="Newspaper.aspx" />
     <Content Include="Web.config" />
     <Content Include="Dashboard.aspx" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Add.aspx.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Add.aspx.designer.cs">
-      <DependentUpon>Add.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Customer.aspx.cs">
       <DependentUpon>Customer.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -1793,12 +1787,26 @@
     <Compile Include="Hawker.aspx.designer.cs">
       <DependentUpon>Hawker.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Locality.aspx.cs">
+      <DependentUpon>Locality.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Locality.aspx.designer.cs">
+      <DependentUpon>Locality.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Login.aspx.cs">
       <DependentUpon>Login.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Login.aspx.designer.cs">
       <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Newspaper.aspx.cs">
+      <DependentUpon>Newspaper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Newspaper.aspx.designer.cs">
+      <DependentUpon>Newspaper.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MasterPage.Master.cs">

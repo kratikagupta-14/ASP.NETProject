@@ -6,7 +6,7 @@
 <head runat="server">
     <title></title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="Content/plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -32,30 +32,26 @@
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
+    <!-- Navbar -->
+     <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+         <!-- Left navbar links -->
+         <ul class="navbar-nav">
+           <li class="nav-item">
+             <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+           </li>
+         </ul>
 
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
-    <!-- Left navbar links -->
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
-      </li>
-       
-    </ul>
-
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
-      </div>
-    </form>
-
-
+         <!-- SEARCH FORM -->
+         <form class="form-inline ml-3">
+            <div class="input-group input-group-sm">
+              <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+              <div class="input-group-append">
+                <button class="btn btn-navbar" type="submit">
+                 <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+          </form>
   </nav>
   <!-- /.navbar -->
 
@@ -86,7 +82,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
         
-            <a href="Dashboard.aspx" class="nav-link active">
+            <a href="Dashboard.aspx" class="nav-link">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -94,32 +90,39 @@
               </p>
             </a>
           
-            <li class="nav-item">
-            <a href="Customer.aspx" class="nav-link">
-              <i class="fas fa-user-friends"></i>
+            
+             <a href="Customer.aspx" class="nav-link">
+              <i class="nav-icon fas fa-user-friends"></i>
               <p>
                 Customer
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          </li>
-         
-            <li class="nav-item">
+          
             <a href="Hawker.aspx" class="nav-link">
-              <i class=" far fa-user"></i>
+              <i class="nav-icon far fa-user"></i>
               <p>
                 Hawker
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          </li>
-
-            <li class="nav-item">
-            <a href="locality.aspx" class="nav-link">
-              <i class="far fa-building "></i>
+         
+            <a href="Locality.aspx" class="nav-link">
+              <i class="nav-icon far fa-building"></i>
               <p>
                 Locality
+                <i class="right fas fa-angle-left"></i>
               </p>
             </a>
-          </li>
+
+            <a href="Newspaper.aspx" class="nav-link">
+              <i class="nav-icon fa fa-book"></i>
+              <p>
+                Newspaper & Magazines
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+
           </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -144,21 +147,15 @@
               <div class="card-body">
                 
                <div class="card-tools">
-                         <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Add Customer</button></td>
-                  <ul class="pagination pagination-sm float-right">
-                    <li class="page-item"><a class="page-link" href="#">&laquo;</a></li>
-                    <li class="page-item"><a class="page-link" href="#">1</a></li>
-                    <li class="page-item"><a class="page-link" href="#">2</a></li>
-                    <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    <li class="page-item"><a class="page-link" href="#">&raquo;</a></li>
-                  </ul>
-                </div>
-                <table id="jsGrid1" class="table table-bordered table-hover">
+                <td><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#myModal">Add Customer</button></td>
+                        
+
+               </div>
+                <table id="example2" class="table table-bordered table-hover">
                   <thead>
                   <tr>
                     <th>Id</th>
                     <th>Customer Name</th>
-                    <th>No. of copy</th>
                     <th>Contact</th>
                     <th>Address</th>
                     <th>Email</th>
@@ -172,12 +169,16 @@
                   <tr>
                     <td>1</td>
                     <td>Ravindar </td>
-                    <td>29</td>
                     <td>982647582</td>
                     <td>noida</td>
                     <td>Ravi@gmail.com</td>
                     <td>bus stand</td>
-                    <td>-</td>
+                    <td>
+                         <a href="#" class="btn btn-primary a-btn-slide-text">
+                        <span class="glyphicon glyphicon-edit" aria-hidden="true"></span>
+                          <span><strong>Edit</strong></span>            
+                            </a>
+                    </td>
                 
                   </tr>
                   </tbody>
@@ -186,42 +187,40 @@
 
 
                    <!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
-  <div class="modal-dialog">
+       <div id="myModal" class="modal fade" role="dialog">
+       <div class="modal-dialog">
 
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-       
-        <h4 class="modal-title">Add a new Customer</h4>
-      </div>
-      <div class="modal-body">
-           <div class="form-group">
-                              <label for="usr">Customer Name:</label>
-                              <input type="text" class="form-control" id="usr" placeholder="Enter customer name">
+                <!-- Modal content-->
+       <div class="modal-content">
+           <div class="modal-header">
+             <h4 class="modal-title">Add a new Customer</h4>
+           </div>
+               <div class="modal-body">
+                  <div class="form-group">
+                    <label for="usr">Customer Name:</label>
+                    <input type="text" class="form-control" id="usr" placeholder="Enter customer name">
 
-                               <label for="start">Contact:</label>
-                               <input type="text" class="form-control" id="start"  placeholder="Enter Contact No" >
+                    <label for="start">Contact:</label>
+                    <input type="text" class="form-control" id="start"  placeholder="Enter Contact No" >
 
-                                <label for="usr">Email:</label>
-                                <input type="text" class="form-control" id="usr"  placeholder="@gmail.com">
+                    <label for="usr">Email:</label>
+                    <input type="text" class="form-control" id="usr"  placeholder="@gmail.com">
 
-                                 <label for="usr">Address:</label>
-                                <input type="text" class="form-control" id="usr"  placeholder="Enter your address">
+                    <label for="usr">Address:</label>
+                    <input type="text" class="form-control" id="usr"  placeholder="Enter your address">
 
-                               <label for="usr">Locality Assigned:</label>
-                                <input type="text" class="form-control" id="usr"  placeholder="Enter your locality here">
+                     <label for="usr">Locality Assigned:</label>
+                     <input type="text" class="form-control" id="usr"  placeholder="Enter your locality here">
 
-                            </div>
-
-      </div>
-      <div class="modal-footer">
-        <button type="submit" class="btn btn-primary">Add</button>
-      </div>
-    </div>
+                  </div>
+              </div>
+                      <div class="modal-footer">
+                          <button type="submit" class="btn btn-primary">Add</button>
+                      </div>
+         </div>
 
   </div>
-</div>                     
+ </div>                     
 
 
 
@@ -293,5 +292,16 @@
 <script src="Content/dist/js/demo.js"></script>
 <!-- page script -->
   
+     <script>
+         $('#example2').DataTable({
+             "paging": true,
+             "lengthChange": false,
+             "searching": false,
+             "ordering": true,
+             "info": true,
+             "autoWidth": false,
+             "responsive": true,
+         });
+       </script>
 </body>
 </html>

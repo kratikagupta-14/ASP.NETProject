@@ -11,7 +11,7 @@ namespace NewspaperAsp.Net
 {
 
 
-    public partial class hawker
+    public partial class Customer
     {
     }
 }
