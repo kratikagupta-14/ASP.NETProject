@@ -11,7 +11,7 @@ namespace NewspaperAsp.Net
 {
 
 
-    public partial class Customer
+    public partial class WebForm5
     {
     }
 }
